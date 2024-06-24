@@ -87,8 +87,14 @@ const identify = catchAsync(async (request, response) => {
       },
     });
   });
+
+  const get=catchAsync(async(request,response)=>{
+    logger.info("***** get Contacts Controller *****");
+    response.send({message:"append `/identify` with the above endpoint and make a post request on postman or any similar API platform with a valid JSON body"})
+  })
   
 
 module.exports = {
   identify,
+  get
 };
